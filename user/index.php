@@ -1,5 +1,5 @@
 <?php
+require("../inc/main.inc");
 ?>
 
 
-<div class="landing-page"> Welcome</div>
