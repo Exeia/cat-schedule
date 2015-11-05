@@ -38,7 +38,7 @@
   <tr>
     <td class="hour" scope="row">8:00</td>
     <td>Closed</td>
-    <td>&nbsp;</td>
+    <td>test</br>test</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
