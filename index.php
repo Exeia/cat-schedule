@@ -1,4 +1,10 @@
 <?php
 include_once('./inc/header.inc');
 ?>
-<div class="landing-top"> Cat Schedule</div>
+
+
+<div class="week-calendar">
+	<?= include('./inc/_template.php')?>
+</div>
+
+

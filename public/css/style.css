@@ -1,5 +1,6 @@
 @import url("bootstrap.css");
-
+@import url("weekly_print.css");
+@import url("weekly_screen.css");
 .landing-top{
 	background-color: #008000;
 	font-size: 32px;
