@@ -18,6 +18,9 @@
   
   function add_dogs($handle, $mcecs, $real_name, $pdx_name, $is_admin)
   {
+    $query = "INSERT INTO shifts (handle, mcecs,name,pdx_name,is_admin) as values ($1, $2,$3,$4,$5)";
+    $result = pg_query_params($db, $query, array($handle, $mcecs, $real_name, $pdx_name,$is_admin));
+    return $result;
 
   }
   function dedog($id)

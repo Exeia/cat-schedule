@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href='css/weekly_screen.css' type="text/css" media="screen, projection" />
-<link rel="stylesheet" href='css/weekly_print.css' type="text/css" media="print" />
+<link rel="stylesheet" href='public/css/style.css' type="text/css" media="screen, projection" />
+<link rel="stylesheet" href='public/css/style.css' type="text/css" media="print" />
 <title>Weekly Schedule</title>
 <style type="text/css">
 #<?php echo date('D'); ?>{background:#efe;}
@@ -38,7 +38,7 @@
   <tr>
     <td class="hour" scope="row">8:00</td>
     <td>Closed</td>
-    <td>test</br>test</td>
+    <td></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
