@@ -6,7 +6,9 @@
 	font-size: 32px;
 	color: white;	
 }
-
+.center{
+    text-align: center;
+}
 
 /*
 	Weekly Calendar
