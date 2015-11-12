@@ -61,6 +61,17 @@
       return false;
     }
   }
+  function get_user_shift_preference($user_id, $week)
+  {
+    $query = "select * from prefrerence where user_id = $1 and date_created >= $2";
+    $result = pg_query_params($db, $query, array($user_id, $week));
+    $row = pg_fetch_all($result);
+    if (empty($row)) {
+      return array();
+    }
+    return ($row
+
+  }
   function get_shifts($date, $date_of_week)
   {
     $query = "select * from shifts where date= $1 and day_of_week = $2";
@@ -83,7 +94,7 @@
     return $result;
 
   }
-  function clock_in($user_id,$shift_id)
+  function clock_in_out($user_id,$shift_id)
   {
     $clockin = False;
     $clockout = False;
