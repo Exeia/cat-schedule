@@ -72,10 +72,10 @@
     return ($row
 
   }
-  function get_shifts($date, $date_of_week)
+  function get_shifts($date, $date_of_week, $time)
   {
-    $query = "select * from shifts where date= $1 and day_of_week = $2";
-    $result = pg_query_params($db, $query, array($handle, $shift));
+    $query = "select * from shifts where date= $1 and day_of_week = $2 and time = $3";
+    $result = pg_query_params($db, $query, array($handle, $shift, $time));
     $rows = pg_fetch_all($result);
     return $rows;    
 

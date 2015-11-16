@@ -10,6 +10,7 @@
 </style>
 </head>
 <body>
+  <?php //require("../database.php");?>
 <table cellspacing="0">
 <caption>Weekly Schedule</caption>
 <colgroup>
@@ -25,13 +26,80 @@
 <thead>
   <tr>
     <th></th>
-    <th scope="col">Sunday</th>
-    <th scope="col">Monday</th>
-    <th scope="col">Tuesday</th>
-    <th scope="col">Wednesday</th>
-    <th scope="col">Thursday</th>
-    <th scope="col">Friday</th>
-    <th scope="col">Saturday</th>
+    <?php 
+    $current_date_of_week = date("D");
+    $current_date = date("m/d");
+    switch ($current_date_of_week)
+    {
+      case "Mon":
+        $mon = $current_date;
+        $tue = date("m/d",strtotime('+1 day'));
+        $wed = date("m/d",strtotime('+2 day'));
+        $thu = date("m/d",strtotime('+3 day'));
+        $fri = date("m/d",strtotime('+4 day'));
+        $sat = date("m/d",strtotime('+5 day'));
+        $sun = date("m/d",strtotime('+6 day'));
+        break;
+      case "Tue":
+        $mon = date("m/d",strtotime('-1 day'));
+        $tue = $current_date;
+        $wed = date("m/d",strtotime('+1 day'));
+        $thu = date("m/d",strtotime('+2 day'));
+        $fri = date("m/d",strtotime('+3 day'));
+        $sat = date("m/d",strtotime('+4 day'));
+        $sun = date("m/d",strtotime('+5 day'));
+        break;
+      case "Wed":
+        $mon = date("m/d",strtotime('-2 day'));
+        $tue = date("m/d",strtotime('-1 day'));
+        $wed = $current_date;
+        $thu = date("m/d",strtotime('+1 day'));
+        $fri = date("m/d",strtotime('+2 day'));
+        $sat = date("m/d",strtotime('+3 day'));
+        $sun = date("m/d",strtotime('+4 day'));
+        break;
+      case "Thu":
+        $mon = date("m/d",strtotime('-3 day'));
+        $tue = date("m/d",strtotime('-2 day'));
+        $wed = date("m/d",strtotime('-1 day'));
+        $thu = $current_date;
+        $fri = date("m/d",strtotime('+1 day'));
+        $sat = date("m/d",strtotime('+2 day'));
+        $sun = date("m/d",strtotime('+3 day'));
+      case "Fri":
+        $mon = date("m/d",strtotime('-4 day'));
+        $tue = date("m/d",strtotime('-3 day'));
+        $wed = date("m/d",strtotime('-2 day'));
+        $thu = date("m/d",strtotime('-1 day'));
+        $fri = $current_date;
+        $sat = date("m/d",strtotime('+1 day'));
+        $sun = date("m/d",strtotime('+2 day'));
+      case "Sat":
+        $mon = date("m/d",strtotime('-5 day'));
+        $tue = date("m/d",strtotime('-4 day'));
+        $wed = date("m/d",strtotime('-3 day'));
+        $thu = date("m/d",strtotime('-2 day'));
+        $fri = date("m/d",strtotime('-1 day'));
+        $sat = $current_date;
+        $sun = date("m/d",strtotime('+1 day'));
+      case "Sun": 
+        $mon = date("m/d",strtotime('-6 day'));
+        $tue = date("m/d",strtotime('-5 day'));
+        $wed = date("m/d",strtotime('-4 day'));
+        $thu = date("m/d",strtotime('-3 day'));
+        $fri = date("m/d",strtotime('-2 day'));
+        $sat = date("m/d",strtotime('-1 day'));
+        $sun = $current_date;
+    }
+    
+    ?> 
+    <th scope="col">Sunday</br> <?= $sun ?></th>
+    <th scope="col">Monday</br> <?= $mon ?></th>
+    <th scope="col">Tuesday</br> <?= $tue ?></th>
+    <th scope="col">Wednesday</br> <?= $wed ?></th>
+    <th scope="col">Thursday</br> <?= $thu?></th>
+    <th scope="col">Friday </br> <?= $fri ?></th>
+    <th scope="col">Saturday </br> <?= $sat ?></th>
   </tr>
 </thead>
 <tbody>
