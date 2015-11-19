@@ -32,64 +32,71 @@
     switch ($current_date_of_week)
     {
       case "Mon":
+        $sun = date("m/d",strtotime('-1 day'));
         $mon = $current_date;
         $tue = date("m/d",strtotime('+1 day'));
         $wed = date("m/d",strtotime('+2 day'));
         $thu = date("m/d",strtotime('+3 day'));
         $fri = date("m/d",strtotime('+4 day'));
         $sat = date("m/d",strtotime('+5 day'));
-        $sun = date("m/d",strtotime('+6 day'));
+       
         break;
       case "Tue":
+        $sun = date("m/d",strtotime('-2 day'));
         $mon = date("m/d",strtotime('-1 day'));
         $tue = $current_date;
         $wed = date("m/d",strtotime('+1 day'));
         $thu = date("m/d",strtotime('+2 day'));
         $fri = date("m/d",strtotime('+3 day'));
         $sat = date("m/d",strtotime('+4 day'));
-        $sun = date("m/d",strtotime('+5 day'));
+        
         break;
       case "Wed":
+        $sun = date("m/d",strtotime('-3 day'));
         $mon = date("m/d",strtotime('-2 day'));
         $tue = date("m/d",strtotime('-1 day'));
         $wed = $current_date;
         $thu = date("m/d",strtotime('+1 day'));
         $fri = date("m/d",strtotime('+2 day'));
         $sat = date("m/d",strtotime('+3 day'));
-        $sun = date("m/d",strtotime('+4 day'));
+        
         break;
       case "Thu":
+        $sun = date("m/d",strtotime('-4 day'));
         $mon = date("m/d",strtotime('-3 day'));
         $tue = date("m/d",strtotime('-2 day'));
         $wed = date("m/d",strtotime('-1 day'));
         $thu = $current_date;
         $fri = date("m/d",strtotime('+1 day'));
         $sat = date("m/d",strtotime('+2 day'));
-        $sun = date("m/d",strtotime('+3 day'));
+        
       case "Fri":
+        $sun = date("m/d",strtotime('-5 day'));
         $mon = date("m/d",strtotime('-4 day'));
         $tue = date("m/d",strtotime('-3 day'));
         $wed = date("m/d",strtotime('-2 day'));
         $thu = date("m/d",strtotime('-1 day'));
         $fri = $current_date;
         $sat = date("m/d",strtotime('+1 day'));
-        $sun = date("m/d",strtotime('+2 day'));
+        
       case "Sat":
+        $sun = date("m/d",strtotime('-6 day'));
         $mon = date("m/d",strtotime('-5 day'));
         $tue = date("m/d",strtotime('-4 day'));
         $wed = date("m/d",strtotime('-3 day'));
         $thu = date("m/d",strtotime('-2 day'));
         $fri = date("m/d",strtotime('-1 day'));
         $sat = $current_date;
-        $sun = date("m/d",strtotime('+1 day'));
-      case "Sun": 
-        $mon = date("m/d",strtotime('-6 day'));
-        $tue = date("m/d",strtotime('-5 day'));
-        $wed = date("m/d",strtotime('-4 day'));
-        $thu = date("m/d",strtotime('-3 day'));
-        $fri = date("m/d",strtotime('-2 day'));
-        $sat = date("m/d",strtotime('-1 day'));
-        $sun = $current_date;
+        
+      case "Sun":
+        $sun = $current_date; 
+        $mon = date("m/d",strtotime('+1 day'));
+        $tue = date("m/d",strtotime('+2 day'));
+        $wed = date("m/d",strtotime('+3 day'));
+        $thu = date("m/d",strtotime('+4 day'));
+        $fri = date("m/d",strtotime('+5 day'));
+        $sat = date("m/d",strtotime('+6 day'));
+        
     }
     
     ?> 

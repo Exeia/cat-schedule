@@ -69,7 +69,7 @@
     if (empty($row)) {
       return array();
     }
-    return ($row
+    return $row
 
   }
   function get_shifts($date, $date_of_week, $time)
@@ -80,6 +80,10 @@
     return $rows;    
 
 
+  }
+  function get_holidays()
+  {
+      
   }
   function assign_shift($handle, $shift, $day)
   {

@@ -26,7 +26,7 @@
 			else
 			{ ?>
 			<li>
-				<a href="/user/index.php">Sign In</a>
+				<a href="/user/signin.php">Sign In</a>
 			</li>
 		<?php 
 			} 

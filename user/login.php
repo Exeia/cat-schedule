@@ -28,6 +28,7 @@ else if(sizeof($dog)> 1 )
 }
 else
 {
-//redirect
+	header("location:index.php");
+
 }
 ?>
