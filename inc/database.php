@@ -85,7 +85,7 @@
   {
       
   }
-  function assign_shift($handle, $shift, $day)
+  function assign_shift($handle, $start_shift,$end_shift, $day_of_week)
   {
     $query = "INSERT INTO shifts (user_id, date, day_of_week) as values ($1, $2,$3)";
     $result = pg_query_params($db, $query, array($handle, $shift));
