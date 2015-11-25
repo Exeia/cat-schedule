@@ -1,6 +1,5 @@
 <script type="text/javascript">
-if(<?= $shift_start?>)
-{
+if ($(".redirect")){
 	window.location.href = "http://localhost:8000";
 }
 
