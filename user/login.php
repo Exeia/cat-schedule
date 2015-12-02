@@ -15,6 +15,6 @@ else
 {
     echo " hello ";
 	header("location:../index.php");
-
+    session_destroy();
 }
 ?>
